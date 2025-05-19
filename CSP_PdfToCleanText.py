@@ -52,11 +52,11 @@ def flags_decomposer(flags):
 
 
 #and where we want to download the full text
-dwdir = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/PDF'
-trainfiles = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/TextForTraining/train_pdf'
-tempfile = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/TempImage'
-ocrfiles = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/OCR'
-cleandata = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Data'
+dwdir = '/Users/../CommonsSynthProject/DataCoded/Articles/PDF'
+trainfiles = '/Users/../CommonsSynthProject/DataCoded/Articles/TextForTraining/train_pdf'
+tempfile = '/Users/../CommonsSynthProject/DataCoded/Articles/TempImage'
+ocrfiles = '/Users/../CommonsSynthProject/DataCoded/Articles/OCR'
+cleandata = '/Users/../CommonsSynthProject/NLPSynth/Data'
 
 os.chdir(dwdir)
 #get all pdf files
@@ -64,7 +64,7 @@ pdfs = glob.glob('*.pdf')
 
 
 #where tesseract actually is located on the machine
-pytesseract.pytesseract.tesseract_cmd = r'/Users/jbaggio/opt/anaconda3/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = r'/Users/../opt/anaconda3/bin/tesseract'
 
 
 #using pymupdf, to get font properties where possible (bold and sizes), if pdf are scanned, then use pytesseract to extract text
