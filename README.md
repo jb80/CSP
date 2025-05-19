@@ -1,4 +1,4 @@
-#Synthesis of Ostrom Institutional Design Principles
+# Synthesis of Ostrom Institutional Design Principles
 Analysis code for the following paper: Baggio, Epstein, Lambert, Joel, Gordian: Blueprints for success: leveraging natural language processing to assess the effect of Ostrom institutional design principles on resources, conflict, and inequality in the commons.
 
 This repository contains the python scripts used for the analysis of institutional design principles. The scripts contained here should be used in order.
