@@ -25,4 +25,12 @@ This repository contains the python scripts used for the analysis of institution
 6. CSP_AnalysisDiffVF2.py:
  
     This script is used after Few Shot Learner and the Embedded Topic Model script in order to analyze the resulting
-   probability of presence/absence and missing in relation to outcomes and by socio-ecological context.
+   probability of presence/absence and missing in relation to outcomes and by socio-ecological context and provides individual DP importance figures.
+
+7. CSP_PSL_ModelBuilder.py:
+ 
+    This script contains functions used in the PSL_Analsysi file. The functions allow the analysis of association rules via probabilistic soft logic. Rules are pre-screened using LASSO regression.
+   
+8. CSP_PSL_Analysis.py:
+ 
+    This script is used after Few Shot Learner and the Embedded Topic Model script and reuires the CPS_PSL_ModelBuilder.py and is used to analyze the results via probabilistic soft logic  in relation to outcomes and by socio-ecological context and provides the key configurations figures in the paper.
