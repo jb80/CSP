@@ -15,9 +15,9 @@ Converts PDF files into machine-readable text using GROBID, PyMuPDF, and Tessera
 
 Trains and evaluates few-shot learning models for:
 
-case-study identification,
-institutional design principle (DP) coding,
-outcome coding (resource conditions, conflict, and inequality).
+* case-study identification,
+* institutional design principle (DP) coding,
+* outcome coding (resource conditions, conflict, and inequality).
 
 The script uses SciCo/Longformer embeddings, SetFit, Optuna-based hyperparameter optimization, and nested cross-validation. Outputs include hard classifications, class probabilities, and uncertainty-aware probability scores.
 
@@ -29,20 +29,20 @@ Applies Embedded Topic Modeling (ETM) to texts classified as single-case studies
 
 Analyzes relationships between institutional design principles and outcomes using XGBoost and SHAP. The script:
 
-evaluates alternative uncertainty thresholds,
-estimates aggregate and context-specific models,
-calculates SHAP values and SHAP interaction values,
-produces individual DP importance and effect figures.
+* evaluates alternative uncertainty thresholds,
+* estimates aggregate and context-specific models,
+* calculates SHAP values and SHAP interaction values,
+* produces individual DP importance and effect figures.
 
 6. CSP_6_PSL_ModelBuilder.py
 
 Contains the functions required for the PSL analysis. The module:
 
-constructs Probabilistic Soft Logic (PSL) models,
-generates and evaluates candidate configurations,
-calculates configuration coverage, consistency, effect, and importance,
-builds co-occurrence networks,
-performs network and community analyses.
+* constructs Probabilistic Soft Logic (PSL) models,
+* generates and evaluates candidate configurations,
+* calculates configuration coverage, consistency, effect, and importance,
+* builds co-occurrence networks,
+* performs network and community analyses.
 
 Candidate configurations are pre-screened using repeated LASSO interaction models.
 
@@ -50,9 +50,9 @@ Candidate configurations are pre-screened using repeated LASSO interaction model
 
 Evaluates institutional configurations using Probabilistic Soft Logic (PSL). The script:
 
-learns PSL rule weights,
-ranks and filters competing configurations,
-performs sensitivity analyses,
-constructs DP co-occurrence networks,
-identifies communities using the Leiden algorithm,
-generates the configurational and network figures reported in the paper.
+* learns PSL rule weights,
+* ranks and filters competing configurations,
+* performs sensitivity analyses,
+* constructs DP co-occurrence networks,
+* identifies communities using the Leiden algorithm,
+* generates the configurational and network figures reported in the paper.
