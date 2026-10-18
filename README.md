@@ -3,8 +3,11 @@ Baggio, Epstein, Lambert, Joel, and Gordian. BSustainable resource management in
 
 This repository contains the python scripts used for the analysis of institutional design principles. The scripts contained here should be used in order.
 
-Analysis_Flow.pdf
+## Workflow:
 
+Analysis_Flow.png
+
+## Scripts:
 
 1. CSP_1_GetArticles.py
 
