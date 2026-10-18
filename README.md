@@ -1,36 +1,58 @@
 # Synthesis of Ostrom Institutional Design Principles
-Analysis code for the following paper: Baggio, Epstein, Lambert, Joel, Gordian: Blueprints for success: leveraging natural language processing to assess the effect of Ostrom institutional design principles on resources, conflict, and inequality in the commons.
+Baggio, Epstein, Lambert, Joel, and Gordian. BSustainable resource management in the commons: a synthesis based on institutional design principles leveraging natural language processing.
 
 This repository contains the python scripts used for the analysis of institutional design principles. The scripts contained here should be used in order.
-1. CSP_GetArticles.py:
 
-      This is the entry script for the following paper: A blueprint for Success: leveraging NLP to assess Ostrom Institutional Design Principles
-2.  CSP_PdfToCleanText.py:
+1. CSP_1_GetArticles.py
 
-      This script takes full text in pdf and parses them in machine readable text either via tesseract or via pyMuPDF
-     Further it cleans the pdf files by eliminating section starting with the following headings:['keywords','introduction', 'methods',  'methodology', 'references', 'bibliography', 'literature cited', 'acknowledgements', 'funding']
-     Hence the resulting text for each article should be composed by abstract, results, discussion and conclusions
-3. CSP_FewShotLearner.py:
- 
-     Build an embedding model to work with a few shot learner to classify papers
+Downloads and organizes the scientific articles used in the analysis pipeline. This is the entry point for reproducing the study Blueprints for Success: Leveraging Natural Language Processing to Assess the Effect of Ostrom Institutional Design Principles on Resources, Conflict, and Inequality in the Commons.
 
-4. CSP_EmbeddedTopics.py:
+2. CSP_2_PdfToCleanText.py
 
-      This script extracts main topics for all the full texts that are considered case studies predicted via the CSP_FewShot
-     Learner script. It does so via embedded topic modelling
-5. CSP_Locations_VF.py:
+Converts PDF files into machine-readable text using GROBID, PyMuPDF, and Tesseract OCR. The script extracts article structure, identifies relevant sections, removes non-substantive content (e.g., references and acknowledgements), and produces the text corpora used in downstream analyses.
 
-      Find locations in papers extraced and cleaned via CSP_ToCleanText and that result in being a case study based on CSP_FewShotLearner
+3. CSP_3_Newton_FewShotLearner_AnnVF.py
 
-6. CSP_AnalysisDiffVF2.py:
- 
-    This script is used after Few Shot Learner and the Embedded Topic Model script in order to analyze the resulting
-   probability of presence/absence and missing in relation to outcomes and by socio-ecological context and provides individual DP importance figures.
+Trains and evaluates few-shot learning models for:
 
-7. CSP_PSL_ModelBuilder.py:
- 
-    This script contains functions used in the PSL_Analsysi file. The functions allow the analysis of association rules via probabilistic soft logic. Rules are pre-screened using LASSO regression.
-   
-8. CSP_PSL_Analysis.py:
- 
-    This script is used after Few Shot Learner and the Embedded Topic Model script and reuires the CPS_PSL_ModelBuilder.py and is used to analyze the results via probabilistic soft logic  in relation to outcomes and by socio-ecological context and provides the key configurations figures in the paper.
+case-study identification,
+institutional design principle (DP) coding,
+outcome coding (resource conditions, conflict, and inequality).
+
+The script uses SciCo/Longformer embeddings, SetFit, Optuna-based hyperparameter optimization, and nested cross-validation. Outputs include hard classifications, class probabilities, and uncertainty-aware probability scores.
+
+4. CSP_4_EmbeddedTopics.py
+
+Applies Embedded Topic Modeling (ETM) to texts classified as single-case studies. The script identifies dominant social-ecological contexts, estimates topic distributions, and produces the contextual variables used in subsequent analyses.
+
+5. CSP_5_XGBoost_Shapley_VF.py
+
+Analyzes relationships between institutional design principles and outcomes using XGBoost and SHAP. The script:
+
+evaluates alternative uncertainty thresholds,
+estimates aggregate and context-specific models,
+calculates SHAP values and SHAP interaction values,
+produces individual DP importance and effect figures.
+
+6. CSP_6_PSL_ModelBuilder.py
+
+Contains the functions required for the PSL analysis. The module:
+
+constructs Probabilistic Soft Logic (PSL) models,
+generates and evaluates candidate configurations,
+calculates configuration coverage, consistency, effect, and importance,
+builds co-occurrence networks,
+performs network and community analyses.
+
+Candidate configurations are pre-screened using repeated LASSO interaction models.
+
+7. CSP_7_PSL_Analysis.py
+
+Evaluates institutional configurations using Probabilistic Soft Logic (PSL). The script:
+
+learns PSL rule weights,
+ranks and filters competing configurations,
+performs sensitivity analyses,
+constructs DP co-occurrence networks,
+identifies communities using the Leiden algorithm,
+generates the configurational and network figures reported in the paper.
