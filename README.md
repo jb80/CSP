@@ -3,6 +3,9 @@ Baggio, Epstein, Lambert, Joel, and Gordian. BSustainable resource management in
 
 This repository contains the python scripts used for the analysis of institutional design principles. The scripts contained here should be used in order.
 
+Analysis_Flow.pdf
+
+
 1. CSP_1_GetArticles.py
 
 Downloads and organizes the scientific articles used in the analysis pipeline. This is the entry point for reproducing the study Blueprints for Success: Leveraging Natural Language Processing to Assess the Effect of Ostrom Institutional Design Principles on Resources, Conflict, and Inequality in the Commons.
