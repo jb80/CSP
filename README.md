@@ -5,7 +5,7 @@ This repository contains the python scripts used for the analysis of institution
 
 ## Workflow:
 
-Analysis_Flow.png
+<img src="Analysis_Flow.png" alt="Alt text" width="500"> 
 
 ## Scripts:
 
