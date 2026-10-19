@@ -43,6 +43,7 @@ import os
 import pickle
 import warnings
 from pathlib import Path
+from csp_paths import MAIN, PSL
 from copy import deepcopy
 from collections import defaultdict
 
@@ -62,8 +63,8 @@ import CSP_6_PSL_ModelBuilder as pqm
 '''
 Directories
 '''
-mainres = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/MainResults')
-pslout = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/PSL')
+mainres = MAIN
+pslout = PSL
 lassoout = pslout / 'LASSO'
 sensitivityout = pslout / 'Sensitivity'
 figureout = pslout / 'Figures'
@@ -154,9 +155,11 @@ with open(lassoout / 'LASSO_Threshold_Stability_Topic.p', 'rb') as input_file:
 Start Java virtual machine
 '''
 
-os.environ['JAVA_HOME'] = '/Users/jbaggio/miniconda3/envs/topmod'
-
-library_directory = Path('/Users/jbaggio/miniconda3/envs/topmod/lib/psl-jars')
+jar_directory = os.environ.get('PSL_JAR_DIR')
+java_home = os.environ.get('JAVA_HOME')
+if not jar_directory and not java_home:
+    raise EnvironmentError('Set PSL_JAR_DIR or JAVA_HOME before running the PSL analysis.')
+library_directory = Path(jar_directory or Path(java_home) / 'lib' / 'psl-jars').expanduser()
 
 if not library_directory.exists():
     raise FileNotFoundError('PSL JAR directory does not exist: ' + str(library_directory))

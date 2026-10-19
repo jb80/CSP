@@ -33,6 +33,7 @@ import os
 import pickle
 import re
 import random
+from csp_paths import MAIN, RESULTS, TOPICS
 
 # Dataset and numerical operations
 import pandas as pd
@@ -63,9 +64,9 @@ from scipy.spatial.distance import squareform
 Settings
 '''
 
-mainres = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/MainResults'
-output = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis'
-figout = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/Figures/Topics'
+mainres = MAIN
+output = RESULTS
+figout = TOPICS
 
 os.makedirs(mainres,exist_ok=True)
 os.makedirs(output,exist_ok=True)
@@ -693,7 +694,7 @@ dftops['argmax'] = dftops[TOPIC_NAMES].idxmax(axis=1)
 
 dftops.to_csv('TopicsMain.csv',index=False)
 
-pickle.dump(dftops,open('TopicsMain.p','wb'))
+pickle.dump(dftops,open(mainres / 'TopicsMain.p','wb'))
 
 
 '''
@@ -868,6 +869,5 @@ print('\n')
 print('=' * 80)
 print('DONE')
 print('=' * 80)
-
 
 

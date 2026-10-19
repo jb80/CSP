@@ -78,6 +78,7 @@ import pickle
 import random
 import warnings
 from pathlib import Path
+from csp_paths import MAIN, TOPICS, SHAPLEY, PSL
 
 import pandas as pd
 import numpy as np
@@ -105,10 +106,10 @@ from scipy.spatial.distance import cosine
 Directories
 '''
 
-mainres = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/MainResults')
-topicsout = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/Figures/Topics')
-shapout = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/Shapley')
-pslout = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/PSL')
+mainres = MAIN
+topicsout = TOPICS
+shapout = SHAPLEY
+pslout = PSL
 
 
 allout = shapout / 'All_Together'
@@ -1721,10 +1722,6 @@ print('\nKey figure:')
 print(allout / 'Pos_Neg_OverallEffects2.pdf')
 
 print('\nKey PSL input:')
-print(shapout / 'Analysis_Data.p')
+print(mainres / 'Analysis_Data.p')
 
 print('\nDone')
-        
-        
-        
-        
