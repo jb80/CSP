@@ -64,6 +64,7 @@ import gc
 import copy
 import re
 from pathlib import Path
+from csp_paths import TRAINING, CLEAN, MAIN, MODELS, FIGURES
 
 # Usual suspects
 import pandas as pd
@@ -162,52 +163,18 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import log_loss
 
 
-'''
-Load data from Path
+'''Shared paths for inputs and outputs.'''
 
-'''
-
-#PROJECT_ROOT = Path(os.environ.get('CSP_PROJECT_ROOT', '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject')).resolve()
-
-#PROJECT_ROOT = Path('~/FewShotProject').expanduser()
-
-#traintext = PROJECT_ROOT / ('DataCoded/Articles/TextForTraining')
-#cleandata = PROJECT_ROOT / ('NLPSynth/Data')
-#mainres = PROJECT_ROOT / ('NLPSynth/Analysis/MainResults')
-#modelfiles = PROJECT_ROOT / ('NLPSynth/Analysis/Models')
-#figout = PROJECT_ROOT / ('NLPSynth/Analysis/Figures')
-
-PROJECT_ROOT = Path.home() / 'FewShotProject'
-
-traintext = PROJECT_ROOT / 'Labels'
-cleandata = PROJECT_ROOT / 'Data'
-
-mainres = PROJECT_ROOT / 'Results/MainResults'
-modelfiles = PROJECT_ROOT / 'Results/Models'
-figout = PROJECT_ROOT / 'Results/Figures'
+traintext = TRAINING
+cleandata = CLEAN
+mainres = MAIN
+modelfiles = MODELS
+figout = FIGURES
 
 for output_path in [mainres, modelfiles, figout]:
     output_path.mkdir(parents=True, exist_ok=True)
     
     
-'''
-Hard coded paths in case
-
-
-traintext = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/TextForTraining'
-cleandata = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Data'
-mainres = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/MainResults'
-modelfiles = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/Models'
-figout = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/Figures'
-
-os.makedirs(mainres, exist_ok=True)
-os.makedirs(modelfiles, exist_ok=True)
-os.makedirs(figout, exist_ok=True)
-
-'''
-
-
-
 '''
 Variables
 '''

@@ -55,6 +55,7 @@ from transformers import AutoTokenizer
 # Dataset and operations
 import pandas as pd
 import numpy as np
+from csp_paths import PDF, TRAIN_PDF, OCR, CLEAN
 
 
 
@@ -645,17 +646,18 @@ Script
 
 
 
-dwdir = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/PDF'
-trainfiles = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/TextForTraining/train_pdf'
-ocrfiles = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/OCR'
-cleandata = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Data'
+dwdir = str(PDF)
+trainfiles = str(TRAIN_PDF)
+ocrfiles = str(OCR)
+cleandata = str(CLEAN)
 
-checkfiles = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/subset'
+os.makedirs(ocrfiles, exist_ok=True)
+os.makedirs(cleandata, exist_ok=True)
 
 intermediate_main = os.path.join(ocrfiles, 'intermediate_pdf', 'main')
 intermediate_train = os.path.join(ocrfiles, 'intermediate_pdf', 'train')
 
-pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = os.environ.get('TESSERACT_CMD', 'tesseract')
 
 print('GROBID STATUS:', requests.get(GROBID_ALIVE_URL).text)
 

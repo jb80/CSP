@@ -1,0 +1,9 @@
+# Keep source data and generated outputs out of the public repository.
+/data/**
+!/data/**/
+!/data/**/.gitkeep
+/results/**
+!/results/**/
+!/results/**/.gitkeep
+__pycache__/
+*.py[cod]

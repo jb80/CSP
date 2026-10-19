@@ -12,9 +12,10 @@ Create a list from WOS and Scopus with dois for downloading full text articles
 #for preparing the files
 import os
 import pandas as pd
+from csp_paths import SEARCHING
 
 #first get directories where paper titles and metadata are stored
-fildir = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Searching'
+fildir = SEARCHING
 
 #gef files for titles and papers based on the following search on wos (<=2022) and Scopus (<=2019), the operators here match the WoS, scopus has equivalents
 #TS = "common pool resource*" OR TS = "community based natural resource* manage*" OR TS = "community based enviro* manage*" OR TS = "community based resource* manage*"
@@ -50,7 +51,6 @@ listdoi = list(doiall)
 doiall.to_csv('doilist.csv') #returns a list with 4430 dois that is all papers in scopus and WoS with doi minus duplicates
 
 #once we have the doi list we download pdf articles manually, leading to 3384 articles downloaded:
-
 
 
 
