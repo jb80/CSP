@@ -645,12 +645,12 @@ Script
 
 
 
-dwdir = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/PDF'
-trainfiles = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/TextForTraining/train_pdf'
-ocrfiles = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/OCR'
-cleandata = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Data'
+dwdir = '/CommonsSynthProject/DataCoded/Articles/PDF'
+trainfiles = '/CommonsSynthProject/DataCoded/Articles/TextForTraining/train_pdf'
+ocrfiles = '/CommonsSynthProject//DataCoded/Articles/OCR'
+cleandata = '/CommonsSynthProject/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Data'
 
-checkfiles = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Articles/subset'
+checkfiles = '/CommonsSynthProject/DataCoded/Articles/subset'
 
 intermediate_main = os.path.join(ocrfiles, 'intermediate_pdf', 'main')
 intermediate_train = os.path.join(ocrfiles, 'intermediate_pdf', 'train')
