@@ -1,7 +1,10 @@
 # Synthesis of Ostrom Institutional Design Principles
-Baggio, Epstein, Lambert, Joel, and Gordian. Sustainable resource management in the commons: a synthesis based on institutional design principles leveraging natural language processing.
 
-This repository contains the python scripts used for the analysis of institutional design principles. The scripts contained here should be used in order.
+
+This repository contains the data used (list of doi of articles and manually coded papers) and the python scripts used for the analysis of institutional design principles. The scripts contained here should be used in order.
+
+#Data
+The DataFinal.xlsx file contains the list of dot for the articles downloaded for the analysis and the manually coded articles (with codes and annotations).
 
 ## Workflow:
 
