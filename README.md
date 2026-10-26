@@ -3,7 +3,7 @@
 
 This repository contains the data used (list of doi of articles and manually coded papers) and the python scripts used for the analysis of institutional design principles. The scripts contained here should be used in order.
 
-#Data
+##Data
 The DataFinal.xlsx file contains the list of dot for the articles downloaded for the analysis and the manually coded articles (with codes and annotations).
 
 ## Workflow:
