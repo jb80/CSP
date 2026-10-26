@@ -14,7 +14,7 @@ import os
 import pandas as pd
 
 #first get directories where paper titles and metadata are stored
-fildir = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/DataCoded/Searching'
+fildir = '/CommonsSynthProject/DataCoded/Searching'
 
 #gef files for titles and papers based on the following search on wos (<=2022) and Scopus (<=2019), the operators here match the WoS, scopus has equivalents
 #TS = "common pool resource*" OR TS = "community based natural resource* manage*" OR TS = "community based enviro* manage*" OR TS = "community based resource* manage*"
