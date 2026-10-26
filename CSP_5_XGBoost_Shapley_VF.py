@@ -105,10 +105,10 @@ from scipy.spatial.distance import cosine
 Directories
 '''
 
-mainres = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/MainResults')
-topicsout = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/Figures/Topics')
-shapout = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/Shapley')
-pslout = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/PSL')
+mainres = Path('/CommonsSynthProject/NLPSynth/Analysis/MainResults')
+topicsout = Path('/CommonsSynthProject/NLPSynth/Analysis/Figures/Topics')
+shapout = Path('/CommonsSynthProject/NLPSynth/Analysis/Shapley')
+pslout = Path('//CommonsSynthProject/NLPSynth/Analysis/PSL')
 
 
 allout = shapout / 'All_Together'
