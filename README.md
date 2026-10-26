@@ -1,7 +1,7 @@
 # Synthesis of Ostrom Institutional Design Principles
 
 
-This repository contains the data used (list of doi of articles and manually coded papers) and the python scripts used for the analysis of institutional design principles. The scripts contained here should be used in order.
+This repository contains the data used (list of doi of articles and manually coded papers) and the python scripts used for the analysis of institutional design principles. The scripts contained here should be used in order. Note that all paths (or locations) to files used by each script will need to be changed for the scripts to work.
 
 ## Data:
 
