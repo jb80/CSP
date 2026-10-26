@@ -62,8 +62,8 @@ import CSP_6_PSL_ModelBuilder as pqm
 '''
 Directories
 '''
-mainres = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/MainResults')
-pslout = Path('/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/PSL')
+mainres = Path('/CommonsSynthProject/NLPSynth/Analysis/MainResults')
+pslout = Path('/CommonsSynthProject/NLPSynth/Analysis/PSL')
 lassoout = pslout / 'LASSO'
 sensitivityout = pslout / 'Sensitivity'
 figureout = pslout / 'Figures'
