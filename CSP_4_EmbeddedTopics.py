@@ -63,9 +63,9 @@ from scipy.spatial.distance import squareform
 Settings
 '''
 
-mainres = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/MainResults'
-output = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis'
-figout = '/Users/jbaggio/Documents/AAA_Study/AAA_Work/CommonsSynthProject/NLPSynth/Analysis/Figures/Topics'
+mainres = '/CommonsSynthProject/NLPSynth/Analysis/MainResults'
+output = '/CommonsSynthProject/NLPSynth/Analysis'
+figout = '/CommonsSynthProject/NLPSynth/Analysis/Figures/Topics'
 
 os.makedirs(mainres,exist_ok=True)
 os.makedirs(output,exist_ok=True)
